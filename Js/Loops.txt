@@ -1,0 +1,62 @@
+// 1. Loop through the myEmojis array and log each of them out to the console
+
+const myEmojis = ["👨‍💻", "⛷", "🍲"]
+const emojiContainer = document.getElementById("emoji-container")
+
+function renderEmojis() {
+    for (let i = 0; i < myEmojis.length; i++) {
+        const emoji = document.createElement('span')
+        emoji.textContent = myEmojis[i]
+        emojiContainer.append(emoji)
+    }
+}
+
+renderEmojis()
+
+const pushBtn = document.getElementById("push-btn")
+pushBtn.addEventListener("click", function(){
+    const emojiInput = document.getElementById("emoji-input")
+    if (emojiInput.value) {
+        myEmojis.push(emojiInput.value)
+        emojiInput.value = ""
+        renderEmojis
+    }
+})
+
+
+====================================================================== 
+
+ Task: Loop over all our names
+    1. Create a new for loop with a incremental counter, called 'counter'
+    2. Make sure the counter is less than the allNamesDOMCollection.length in the loop conditional
+    3. Declare a const called 'currentName' and store the textContext
+    4. Make sure the 'currentName' is lowercase
+    5. Log out the 'currentName' so we can see all the names from the loop!
+
+
+
+    for (let counter = 0; counter < allNamesDOMCollection.length; counter++) {
+        const currentName = allNamesDOMCollection[counter].textContent.toLowerCase();
+        console.log(currentName);
+    }
+
+=================================================================================
+
+Challenge
+1. Create a function called getDiceRollArray that uses a 
+   for loop to return an array of random numbers between 1-6. 
+2  The function should have diceCount as a parameter and the 
+   array it returns should be diceCount length.
+3  For testing purposes, call the function with a diceCount of 
+   3 and log out the result. 
+** check out hint.md for extra help! **
+*/
+
+function getDiceRollArray(diceCount){
+    const newDiceRolls = []
+    for(let i = 0; i < diceCount; i++){
+        newDiceRolls.push(Math.ceil(Math.random()*6) +1)
+    }
+    console.log(newDiceRolls)
+}
+

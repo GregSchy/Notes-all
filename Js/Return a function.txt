@@ -1,0 +1,24 @@
+function getLottoNumbers(){
+    const winningNums = []
+    for (let i = 0; i < 6; i++){
+        winningNums.push(Math.round(Math.random()*100))
+    }
+    return winningNums
+}
+
+function getWinningNumbersHtml(){
+    return getLottoNumbers().map(function(num){
+        return `<div class="number">${num}</div>`
+    }).join('')
+}
+
+document.getElementById('winning-numbers').innerHTML = getWinningNumbersHtml()
+  
+=============================================================================
+
+const poisonMushrooms = new Array(10).fill('🍄').map(function(mushroom){
+    return `<div class="box">${mushroom}</div>`
+}).join('')
+
+document.getElementById('mushrooms').innerHTML = poisonMushrooms
+
