@@ -73,3 +73,12 @@ Function Expression is another way to define a function in JavaScript.
   let add = (a, b) => a + b;
 
   console.log(add(2, 3));
+
+
+  ===================================
+
+  React vs Angular differences
+
+  React is written in JavaSctript when Angular is written in typesvript
+  
+
