@@ -1,3 +1,4 @@
+
 What is currying?
 
 Currying is when you break down a function that takes multiple arguments into a series of functions 
@@ -32,9 +33,43 @@ We will now curry this function:
      called add3 that will add 3 to its argument. (This is what some may call a closure.) The third statement 
      uses the add3 operation to add 3 to 4, again producing 7 as a result.
 
+ ===============================================
 
 
-     ===============================================
+     Different ways of writing functions in JavaScript
+
+     A Function is a block of code that is designed to perform a task and executed when it is been called or invoked.
+
+    There are 3 ways of writing a function in JavaScript:
+
+    Function Declaration
+    Function Expression
+    Arrow Function
+
+1. function Declaration
+
+function add(a,b) {
+  console.log(a+b)
+}
+
+add(2,3)
+
+2. Function expression:
+
+Function Expression is another way to define a function in JavaScript.
+ Here we define a function using a variable and store the returned value in that variable.
+
+ const add = function(a, b) {
+  console.log(a+b)
+ }
+
+ add(2, 3)
 
 
-     
+ 3. Arrow Functions: Arrow functions are been introduced in the ES6 version of JavaScript.
+  It is used to shorten the code. Here we do not use the “function” keyword and use the arrow symbol.
+
+
+  let add = (a, b) => a + b;
+
+  console.log(add(2, 3));
