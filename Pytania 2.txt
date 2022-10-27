@@ -252,3 +252,26 @@ const sum = nums.reduce((total, current) => {
 }, 0)
 
 console.log(sum); /// 15
+
+======================================================
+
+undefined vs null
+
+
+Null: It is the intentional absence of the value. It is one of the primitive values of JavaScript.
+
+Undefined: It means the value does not exist in the compiler. It is the global object.
+
+
+ null == undefined // true
+ null === undefined // false
+
+NULL
+ null ? console.log("true") : console.log("false") // false
+
+ UNDEFINED
+ var temp;
+if(temp === undefined)
+console.log("true");
+else
+console.log("false");/// true
