@@ -219,3 +219,20 @@ const value2 = '5';
 
 console.log(value1 == value2); ////// true
 console.log(value1 === value2); //////// false
+
+'' == '0'           // false
+0 == ''             // true
+0 == '0'            // true
+
+false == 'false'    // false
+false == '0'        // true
+
+false == undefined  // false
+false == null       // false
+null == undefined   // true
+
+' \t\r\n ' == 0     // true
+
+=============================
+
+map() vs filter() vs reduce()
