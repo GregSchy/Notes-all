@@ -275,3 +275,16 @@ if(temp === undefined)
 console.log("true");
 else
 console.log("false");/// true
+
+=================================
+
+What are some JavaScript data types?
+
+JavaScript is a dynamic language with dynamic types.
+ Variables in JavaScript are not directly associated with any
+  particular value type, and any variable can be assigned (and re-assigned) 
+  values of all types:
+
+  // boolean, strings, numbers, BigInt, Symbol
+// [], {}, Map, Set - array with uniqe values
+
