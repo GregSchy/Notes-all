@@ -307,4 +307,24 @@ console.log(fullUser);//// ›{channel: "codingtutorials360", firstName: "Dylan"
 const user = { firstName: 'Dylan', lastName: 'Israel', channel: 'codingtutorials360' };
 const defaults = { channel: 'scrimba', ...user };
 console.log(defaults);// {channel: "codingtutorials360", firstName: "Dylan", lastName: "Israel"}
+----------
+Array and Object Destructuring in JavaScript
 
+The destructuring assignment is a cool feature that came along with ES6. Destructuring is a JavaScript
+ expression that makes it possible to unpack values from arrays, or properties from objects, into distinct
+  variables. That is, we can extract data from arrays and objects and assign them to variables.
+
+let introduction = ["Hello", "I" , "am", "Sarah"];
+let [greeting, pronoun] = introduction;
+
+console.log(greeting);//"Hello"
+console.log(pronoun);//"I"
+--
+
+function getArray() {
+    return ["Hello", "I" , "am", "Sarah"];
+} 
+let [greeting,pronoun] = getArray();
+
+console.log(greeting);//"Hello"
+console.log(pronoun);//"I"
