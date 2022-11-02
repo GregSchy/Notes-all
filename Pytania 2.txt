@@ -293,3 +293,18 @@ JavaScript is a dynamic language with dynamic types.
 
 Spread  & Rest operator
 
+const users = ['Dylan', 'Per', 'Dollan'];
+const allUsers = ['Olivia', ...users];
+console.log(allUsers);///// ["Olivia", "Dylan", "Per", "Dollan"]
+
+
+const user = { firstName: 'Dylan', lastName: 'Israel' };
+const fullUser = { channel: 'codingtutorials360', ...user };
+console.log(fullUser);//// ›{channel: "codingtutorials360", firstName: "Dylan", lastName: "Israel"}
+
+--------
+
+const user = { firstName: 'Dylan', lastName: 'Israel', channel: 'codingtutorials360' };
+const defaults = { channel: 'scrimba', ...user };
+console.log(defaults);// {channel: "codingtutorials360", firstName: "Dylan", lastName: "Israel"}
+
