@@ -341,6 +341,7 @@ console.log(name);//"Sarah"
 console.log(country);//"Nigeria"
 console.log(job);//Developer"
 
+
 ------------------------------
 
 
