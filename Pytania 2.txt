@@ -364,3 +364,6 @@ getDerivedStateFromProps()
 render()
 componentDidMount()
 The render() method is required and will always be called, the others are optional and will be called if you define them.
+--
+render
+The render() method is required, and is the method that actually outputs the HTML to the DOM.
