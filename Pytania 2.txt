@@ -367,3 +367,28 @@ The render() method is required and will always be called, the others are option
 --
 render
 The render() method is required, and is the method that actually outputs the HTML to the DOM.
+
+==
+Updating
+The next phase in the lifecycle is when a component is updated.
+
+A component is updated whenever there is a change in the component's state or props.
+
+React has five built-in methods that gets called, in this order, when a component is updated:
+
+getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+The render() method is required and will always be called, the others are optional and will be called if you define them.
+
+
+==========
+
+Unmounting
+The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.
+
+React has only one built-in method that gets called when a component is unmounted:
+
+componentWillUnmount()
