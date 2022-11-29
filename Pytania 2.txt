@@ -287,7 +287,6 @@ JavaScript is a dynamic language with dynamic types.
   values of all types:
 
   // boolean, strings, numbers, BigInt, Symbol
-  
 // [], {}, Map, Set - array with uniqe values
 
 ================================
