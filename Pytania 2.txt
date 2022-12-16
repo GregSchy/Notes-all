@@ -86,6 +86,7 @@ Function Expression is another way to define a function in JavaScript.
 
   Statically vs. Dynamically typed language
 
+
 Statically-----------
 
 We call a language “statically-typed” if it follows type checking during compilation.
