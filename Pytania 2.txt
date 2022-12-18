@@ -113,6 +113,7 @@ Most modern programming languages are dynamically typed. Some examples of dynami
 
 
 
+
 ========================
 
 Var, let, const 
