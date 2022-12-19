@@ -3,10 +3,13 @@
 
 In JavaScript, hoisting is the behavior of moving declarations to the top of a code block. 
 This is done at the creation phase of the execution context, before code execution.
-console.log(x);
-var x = 5;
+
+    console.log(x);
+    var x = 5;
+
 At runtime, the JavaScript interpreter will implicitly move the declaration of
  the x variable to the top of the code block, as if it were written like this:
+
 var x;
 console.log(x);
 x = 5;
@@ -46,6 +49,8 @@ POST: Creates a new resource on the server.
 PUT: Replaces an existing resource on the server.
 PATCH: Modifies an existing resource on the server.
 DELETE: Deletes a resource from the server.
+
+
 REST APIs use a URI (Uniform Resource Identifier) to identify resources, and HTTP methods to manipulate those resources.
  For example, the following URI identifies a resource representing a list of users:
 
@@ -59,6 +64,13 @@ REST APIs are not the only way to build APIs, but they are a widely used and wel
 An API (Application Programming Interface) is a set of rules and protocols that defines how different software systems can
 communicate with each other. APIs are often used to allow one application to access the functionality or data of another application.
 
+
+A REST API (REpresentational State Transfer API) is a type of API that is based on the REST (REpresentational State Transfer) 
+architecture and uses the HTTP (Hypertext Transfer Protocol) to exchange data between applications.
+
+The difference between an API and a REST API is that a REST API is a specific type of API that is based on the REST 
+architecture and uses HTTP, while an API is a general concept that can include various types of interfaces for programming
+ applications, such as REST APIs, GraphQL APIs, etc.
 
 ===========================
 
@@ -314,9 +326,11 @@ It's important to understand the difference between pass by value and pass by re
 
 Firebase can be used in a variety of ways by front-end developers. Some common uses of Firebase for front-end development include:
 
-Real-time database: Firebase provides a real-time database that can be used to store and sync data across multiple devices in real-time. This can be useful for building applications that need to display live data or that require frequent updates.
+Real-time database: Firebase provides a real-time database that can be used to store and sync data across multiple devices in real-time. 
+This can be useful for building applications that need to display live data or that require frequent updates.
 
-User authentication: Firebase provides built-in support for user authentication, including support for popular identity providers like Google, Facebook, and more. This can be useful for building applications that require user login or that need to manage user permissions.
+User authentication: Firebase provides built-in support for user authentication, including support for popular identity providers 
+like Google, Facebook, and more. This can be useful for building applications that require user login or that need to manage user permissions.
 
 Hosting: Firebase provides hosting for static websites and web applications, which can be useful for quickly deploying front-end projects.
 
@@ -345,3 +359,279 @@ Here are some examples to illustrate the difference between == and ===:
 As a general rule, it is recommended to use the triple equals operator (===) whenever possible,
  as it provides more strict type checking and can help prevent unintended type coercion. However, 
  there are some cases where the double equals operator (==) may be useful, such as when comparing values that might be null or undefined.
+
+======
+
+10. ES5 vs. ES6 difference
+
+
+ECMAScript 5 (also known as ES5) and ECMAScript 6 (also known as ES6 or ECMAScript 2015) are versions
+ of the JavaScript programming language. ES5 was released in 2009 and is the current version supported
+  by all modern browsers. ES6 was released in 2015 and introduced several new features to the
+ language, which are not supported by older browsers.
+
+Here are some of the main differences between ES5 and ES6:
+
+let and const: In ES6, the let and const keywords were introduced as alternatives to var for declaring variables. 
+let is used to declare a block-scoped variable, which means that it is only accessible within the block 
+(a block is defined as a set of curly braces) in which it is defined. const is used to declare a read-only 
+variable, which means that the value of the variable cannot be reassigned.
+
+Arrow functions: In ES6, a new syntax for writing functions was introduced, called arrow functions. 
+Arrow functions are shorter and easier to read than traditional function expressions, and they do not have their own this value.
+
+Classes: In ES6, the class keyword was introduced, which allows you to define classes in a syntax
+ that is similar to other object-oriented programming languages.
+
+Template literals: In ES6, template literals were introduced, which are string literals that
+ can contain placeholders for variables. Template literals make it easier to build strings that contain variables or expressions.
+
+Modules: In ES6, the import and export keywords were introduced, which allow you to split
+ your code into separate modules and import or export functions, objects, and other values between them.
+
+====
+
+11. Classes in Javascript
+
+
+In JavaScript, a class is a template for creating objects. It is a way to define 
+a blueprint for an object, and to create objects from that blueprint.
+
+Here is an example of how you can define a class in JavaScript:
+
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      sayHello() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+      }
+    }
+
+In this example, we define a class called Person that has a constructor function and a sayHello method.
+ The constructor function is used to initialize the object with the specified name and age properties. 
+ The sayHello method is a function that prints a greeting to the console.
+
+To create an object from the Person class, we can use the new keyword followed by the class name:
+
+    const person1 = new Person('John', 30);
+    person1.sayHello(); // prints "Hello, my name is John and I am 30 years old."
+
+In this example, we create a new Person object with the name "John" and the age 30. We then call the sayHello method on the object, 
+which prints the greeting to the console.
+
+Classes in JavaScript are a powerful tool for creating and organizing objects, and they are an important part 
+of the object-oriented programming paradigm. If you are interested in learning more about classes in JavaScript,
+ you can consult the official documentation or other resources online.
+
+
+ =============
+
+ 12. Reconciliation algorithm/Diffing in react
+
+ In React, "diffing" refers to the process of comparing the virtual DOM (a lightweight in-memory representation
+  of the actual DOM) with the previous version of the virtual DOM to determine which DOM elements have changed.
+   React uses this information to optimize the rendering of components and minimize the number of DOM updates
+    that need to be made.
+
+Here's how diffing works in React:
+
+When a component's state or props change, React creates a new virtual DOM tree for the component.
+
+React compares the new virtual DOM tree with the previous version of the tree to determine which elements have changed.
+
+If React determines that an element has changed, it updates the corresponding DOM element. If an element has been removed,
+ React removes it from the DOM. If an element has been added, React adds it to the DOM.
+
+If React determines that a component's state or props have not changed, it does not update the corresponding DOM elements.
+ This helps to improve the performance of the application by minimizing unnecessary DOM updates.
+
+React uses a heuristic approach to diffing that is optimized for the common case, but it is not always able to determine
+ the most efficient way to update the DOM. In some cases, you may need to use the shouldComponentUpdate() lifecycle method
+  to optimize the diffing process by telling React whether or not to update a component based on specific conditions.
+
+
+  ===========
+
+
+  13. Props
+
+  In React, props (short for "properties") are a way of passing data from a parent component 
+  to a child component. Props are read-only in the child component, which means that the child 
+  component cannot modify the props that it receives.
+
+Here's an example of how to use props in a React component:
+
+
+    import React from 'react';
+
+    // Parent component
+    function Welcome(props) {
+      return <h1>Hello, {props.name}</h1>;
+    }
+
+    // Child component
+    function App() {
+      return <Welcome name="Alice" />;
+    }
+
+
+In this example, the Welcome component is a parent component that takes a prop called name. The App component
+ is a child component that renders the Welcome component and passes a value for the name prop. When the Welcome 
+ component is rendered, it will display a greeting message with the value of the name prop.
+
+Props can be used to pass any type of data, including strings, numbers, arrays, and objects. 
+You can also use props to pass functions or other React components as values.    
+
+
+
+==============================
+
+
+14. Lifecycle of component
+
+
+In React, a component's lifecycle refers to the different stages of its existence, 
+from when it is first created to when it is destroyed. During its lifecycle, a component
+ can perform various actions and react to changes in its state or props.
+
+Here is an overview of the lifecycle of a React component:
+
+Mounting: This is the process of initializing a component and rendering it to the DOM for the first time. The following lifecycle methods are called during the mounting phase:
+
+    -constructor(): This method is called before the component is mounted. You can use it to initialize state and bind event handlers.
+
+    -render(): This method is called to render the component's JSX code.
+
+    -componentDidMount(): This method is called after the component is rendered to the DOM. You can use it to perform any necessary DOM manipulation or make API calls.
+
+Updating: This is the process of updating a component's state or props and re-rendering it to the DOM. The following lifecycle methods 
+are called during the updating phase:
+
+    -shouldComponentUpdate(): This method is called before the component is updated. You can use it to optimize the update process by
+    returning false if the component does not need to be re-rendered.
+
+    -render(): This method is called to re-render the component's JSX code with the updated state or props.
+
+    -getSnapshotBeforeUpdate(): This method is called just before the DOM is updated with the new component.
+    You can use it to capture any information that you need to use after the update has been applied.
+
+    -componentDidUpdate(): This method is called after the component has been updated and the DOM has been updated 
+    with the new component. You can use it to perform any necessary DOM manipulation or make API calls.
+
+Unmounting: This is the process of destroying a component and removing it from the DOM. The following lifecycle method is called during the unmounting phase:
+
+    -componentWillUnmount(): This method is called just before the component is unmounted and destroyed.
+    You can use it to perform any necessary cleanup, such as canceling network requests or removing event listeners.
+
+======================
+
+
+15. Component in React
+
+In React, a component is a piece of code that represents a part of a user interface. 
+It is a reusable piece of code that can be used to render a specific piece of UI (user interface) in a declarative way.
+
+A component can either be a function or a class, and it typically takes in input (props)
+ and returns a tree of components that is rendered to the DOM.
+
+Here is an example of a functional component in React:
+
+    import React from 'react';
+
+    const MyComponent = (props) => {
+      return (
+        <div>
+          <h1>Hello, {props.name}</h1>
+          <p>This is a functional component</p>
+        </div>
+      );
+    };
+
+    export default MyComponent;
+
+
+And here is an example of a class-based component:
+
+    import React, { Component } from 'react';
+
+    class MyComponent extends Component {
+      render() {
+        return (
+          <div>
+            <h1>Hello, {this.props.name}</h1>
+            <p>This is a class-based component</p>
+          </div>
+        );
+      }
+    }
+
+    export default MyComponent;
+
+
+You can use a component by importing it into another file and rendering it in the JSX code:
+
+    import React from 'react';
+    import MyComponent from './MyComponent';
+
+    const App = () => {
+      return (
+        <div>
+          <MyComponent name="John" />
+        </div>
+      );
+    };
+
+    export default App;
+
+    ==============
+
+16. What is JSX
+
+JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows you
+ to write HTML-like code in your JavaScript files. It was designed to make it easier for 
+ developers to build user interfaces by allowing them to write declarative code that looks 
+ like HTML, but is actually a syntax that gets compiled into JavaScript.
+
+JSX is not a standalone programming language, but rather a syntax extension for JavaScript. 
+It is typically used in combination with React, a JavaScript library for building user interfaces,
+ but it can also be used with other libraries and frameworks.
+
+Here is an example of JSX code:
+
+    import React from 'react';
+
+    const element = (
+      <h1>
+        Hello, world!
+      </h1>
+    );
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+
+In this example, the JSX code is used to create a virtual DOM element, which is then rendered to the actual
+ DOM using the ReactDOM.render() method.
+
+JSX code looks similar to HTML, but it has a few key differences. For example, JSX uses camelCase syntax for
+ attributes and elements must be closed. Additionally, you can use JavaScript expressions within JSX code by enclosing them in curly braces.
+========
+
+17. XML
+
+
+ JavaScript is a programming language that is commonly used in web development. It is a client-side scripting language,
+  which means that it is executed by the user's web browser rather than on the web server. JavaScript is often used to
+   add interactive elements to web pages, such as form validation, creating drop-down menus, and creating animations.
+
+XML (eXtensible Markup Language) is a markup language that is used to structure, store, and transport data. It is a text-based
+ format that is designed to be both human-readable and machine-readable. XML is often used to store and transmit data over the internet, 
+ such as in web services or in RSS feeds.
+
+JavaScript can be used to parse and manipulate XML data, as well as to interact with XML documents using the Document Object Model (DOM).
+ For example, a JavaScript program could use the DOM to access and modify the contents of an XML document, or to send and receive XML
+  data from a web server using an XMLHttpRequest.
