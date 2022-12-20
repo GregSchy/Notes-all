@@ -1,0 +1,95 @@
+1. What is event loop in js
+
+In JavaScript, the event loop is a mechanism that ensures that code execution is
+ coordinated and controlled by the runtime environment, allowing it to run asynchronously.
+  It works by continually checking a queue of tasks (known as the "task queue") and executing the tasks that are ready to be run.
+
+The event loop is an important concept in JavaScript because it allows the runtime to
+ handle asynchronous tasks efficiently. Without the event loop, JavaScript would be a
+  synchronous language, which means that the browser would freeze while waiting for a long-running task to complete.
+
+Here's a simplified example of how the event loop works:
+
+    -The runtime starts and begins executing the main script.
+    -While executing the main script, the runtime encounters an asynchronous task, such as making an HTTP request.
+    -The runtime adds the task to the task queue and continues executing the main script.
+    -When the main script finishes executing, the runtime checks the task queue for any tasks that are ready to be run.
+    -If there are any tasks in the queue, the runtime removes the first task and executes it.
+    -The runtime repeats this process until the task queue is empty.
+
+The event loop is a crucial part of the JavaScript runtime and is responsible for ensuring that asynchronous tasks are executed in a timely and coordinated manner.
+
+===================
+
+2.What is BIND in js
+
+In JavaScript, the bind() method is a function that creates a new function with the same body 
+as the original function, but with a specific this value and arguments. It allows you to create 
+a new function that is bound to a particular object, which means that the this value inside the 
+new function will always be the object you specified, no matter how the function is called.
+
+Here's an example of how bind() works:
+
+        const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        fullName: function() {
+            return `${this.firstName} ${this.lastName}`;
+        }
+        };
+
+        const getFullName = person.fullName.bind(person);
+
+        console.log(getFullName()); // Outputs "John Doe"
+
+
+ In this example, the fullName function is a method on the person object, and it refers to this.firstName
+and this.lastName to get the first and last name of the person. We use the bind() method to create a new function,
+ getFullName, that is bound to the person object. When we call getFullName(), the this value inside the 
+ function is set to the person object, so this.firstName and this.lastName refer to the firstName and lastName
+ properties on the person object, respectively.
+
+The bind() method is often used in JavaScript to preserve the value of this when 
+passing a function as a callback, or when creating a new function that needs to use 
+the same this value as the original function.
+
+=============================
+
+3.Difference between forEach() and map()
+
+Both the forEach and map methods are array methods in JavaScript that can be used to iterate over 
+the elements of an array and perform some operation on each element. However, there are some key 
+differences between these two methods:
+
+    -forEach is used to iterate over an array and perform a side effect (e.g., updating a variable, 
+    making an API call, etc.) for each element. It does not return a new array, and it does not alter 
+    the original array.
+
+            const numbers = [1, 2, 3, 4];
+
+            numbers.forEach(number => {
+            console.log(number);
+            });
+
+ -map is also used to iterate over an array, but it returns a new array that is the result of 
+ applying a transformation function to each element of the original array. The original array is not modified.           
+
+            const numbers = [1, 2, 3, 4];
+
+            const doubledNumbers = numbers.map(number => number * 2);
+
+            console.log(doubledNumbers); // [2, 4, 6, 8]
+
+One key difference between forEach and map is that map allows you to transform the elements of an array 
+in a way that is not possible with forEach. For example, you can use map to transform an array of strings 
+into an array of objects:    
+
+            const words = ['cat', 'dog', 'fish'];
+
+            const objects = words.map(word => ({ word }));
+
+            console.log(objects); // [{ word: 'cat' }, { word: 'dog' }, { word: 'fish' }]
+
+            
+  So, to summarize, forEach is used to iterate over an array and perform a side effect, 
+  while map is used to transform the elements of an array into a new array.            

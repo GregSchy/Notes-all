@@ -240,7 +240,7 @@ In general, it's recommended to use functional components whenever possible and 
 6. Lifecycle of component
 
 
-unctional components do not have a lifecycle in the same way that class-based components do. 
+Functional components do not have a lifecycle in the same way that class-based components do. 
 In a class-based component, you can define methods that are called at different stages of the component's lifecycle,
  such as when it is mounted to the DOM or when it receives new props. 
 These methods include componentDidMount, shouldComponentUpdate, componentDidUpdate, and componentWillUnmount.
@@ -635,3 +635,131 @@ XML (eXtensible Markup Language) is a markup language that is used to structure,
 JavaScript can be used to parse and manipulate XML data, as well as to interact with XML documents using the Document Object Model (DOM).
  For example, a JavaScript program could use the DOM to access and modify the contents of an XML document, or to send and receive XML
   data from a web server using an XMLHttpRequest.
+
+
+  =====
+
+  18. DOM
+
+  In the context of web development, the Document Object Model (DOM) is a programming interface for HTML and XML documents.
+   It represents the structure of a document as a tree of objects, with each object representing a part of the document
+    (such as an element, an attribute, or a piece of text).
+
+React is a JavaScript library for building user interfaces. It allows developers to create reusable components that can be 
+rendered to the DOM. When a component is rendered, React compares the current version of the component in the DOM to the
+ desired version, and makes the necessary changes to the DOM to bring it in line with the desired version. This process is known as "reconciliation."
+
+In summary, the DOM is a tree-like representation of an HTML or XML document, and React is a library that allows developers 
+to create and manipulate DOM elements using reusable components.
+
+===
+
+19. How to handle errors in React
+
+There are several ways to handle errors in React:
+
+Using the try and catch statements: You can use the try and catch statements to handle errors in your React components. 
+This can be useful for handling errors that occur during rendering, for example.
+
+    class MyComponent extends React.Component {
+      render() {
+        try {
+          // Render something that might throw an error
+        } catch (error) {
+          // Handle the error
+        }
+      }
+    }
+
+-Using the componentDidCatch lifecycle method: React provides a lifecycle method called componentDidCatch that 
+can be used to handle errors that occur in a component's render method or in the lifecycle methods of its children.
+
+    class MyComponent extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+      }
+
+      componentDidCatch(error, info) {
+        this.setState({ hasError: true });
+        // You can also log the error to an error reporting service
+      }
+
+      render() {
+        if (this.state.hasError) {
+          // Render an error message
+        } else {
+          // Render the component normally
+        }
+      }
+    }
+
+-Using the Error Boundaries feature: React 16.0 introduced a new feature called "Error Boundaries" that allows you to define a 
+boundary in your application where errors can be caught and handled. An error boundary is a class component that 
+implements the componentDidCatch lifecycle method. Any components within the boundary will be caught by the error boundary if they throw an error.
+
+    class ErrorBoundary extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+      }
+
+      componentDidCatch(error, info) {
+        this.setState({ hasError: true });
+        // You can also log the error to an error reporting service
+      }
+
+      render() {
+        if (this.state.hasError) {
+          // Render an error message
+        } else {
+          // Render the children normally
+          return this.props.children;
+        }
+      }
+    }
+
+    class MyComponent extends React.Component {
+      render() {
+        // Any errors thrown within this component will be caught by the error boundary
+        return <div>Hello, world!</div>;
+      }
+    }
+
+    ReactDOM.render(
+      <ErrorBoundary>
+        <MyComponent />
+      </ErrorBoundary>,
+      document.getElementById('root')
+    );
+
+Error boundaries can be useful for handling errors that might occur in a part of your application that is not 
+directly under your control, such as a third-party library or a child component.
+
+There are several other ways to handle errors in React, but these are some of the most common approaches. 
+It is important to have a good error handling strategy in place to ensure that your application is stable and reliable.
+
+
+====
+
+20.  When is it appropriate to use context in React? 
+
+
+In React, context is a feature that allows you to pass data through the component tree without having to
+ pass props down manually at every level. It is often used when you have data that needs to be accessible 
+ by many components within an application, but the data does not fit naturally into the props hierarchy
+  of your component tree.
+
+There are a few situations where it might be appropriate to use context in React:
+
+When you have a deeply nested component tree and you don't want to pass props down through multiple levels of components.
+
+When you have a piece of data that is shared by many components, and the data does not change frequently.
+
+When you want to avoid prop drilling, which is the process of passing props down through multiple levels of components 
+to reach the components that need the data.
+
+It is generally recommended to use context sparingly, as it can make it more difficult to understand how data is being 
+passed around in a large application. It is often better to use props to pass data down through the component tree, as 
+this makes it easier to understand the flow of data in your application. However, in certain situations, context can be 
+a useful tool for making data available to many components without the need for prop drilling.
