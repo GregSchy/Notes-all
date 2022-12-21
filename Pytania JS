@@ -90,6 +90,33 @@ into an array of objects:
 
             console.log(objects); // [{ word: 'cat' }, { word: 'dog' }, { word: 'fish' }]
 
-            
+
   So, to summarize, forEach is used to iterate over an array and perform a side effect, 
   while map is used to transform the elements of an array into a new array.            
+
+================
+
+4. Anonymous Class in js
+
+In JavaScript, an anonymous class is a class that is defined without a name. It is often used when you need
+ to create a one-time use class that does not need to be referenced elsewhere in your code.
+
+Here's an example of defining an anonymous class in JavaScript:
+
+            const myObject = new class {
+            constructor() {
+                this.value = 'Hello';
+            }
+            greet() {
+                console.log(this.value);
+            }
+            }();
+
+            myObject.greet(); // 'Hello'
+
+    In the example above, we are creating an anonymous class that has a constructor and a method, and then immediately
+     instantiating an object from that class. We can then call the greet method on the object.
+
+    Anonymous classes can be useful when you need to create a simple class that will not be used elsewhere in your code,
+     or when you need to create a class on the fly based on some runtime condition. They can also be used to create anonymous 
+     inner classes in JavaScript, which are classes that are defined within the scope of another class or function.    
