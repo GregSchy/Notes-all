@@ -763,3 +763,37 @@ It is generally recommended to use context sparingly, as it can make it more dif
 passed around in a large application. It is often better to use props to pass data down through the component tree, as 
 this makes it easier to understand the flow of data in your application. However, in certain situations, context can be 
 a useful tool for making data available to many components without the need for prop drilling.
+
+===
+
+21. What is REST
+
+REST (Representational State Transfer) is an architectural style for building web services. It is based on a 
+set of principles that define how web resources should be structured and accessed over the web.
+
+REST is often used for building APIs (Application Programming Interfaces) that allow different systems
+ to communicate with each other over the web. APIs built using REST principles are called RESTful APIs.
+
+Some key principles of REST include:
+
+  - Client-server architecture: In a RESTful system, the client and server are separate, independent components
+  that communicate through a well-defined interface.
+
+  - Statelessness: RESTful APIs do not maintain state between requests. This means that each request from a 
+  client should contain all the information necessary for the server to fulfill the request.
+
+  - Cacheability: RESTful APIs should be designed in such a way that responses can be cached by the client 
+  or by intermediaries (such as a CDN). This can improve performance and scalability by reducing the number of
+   requests that need to be made to the server.
+
+  - Layered system: A RESTful API can be used by multiple clients over different networks and can include multiple 
+  intermediaries (such as load balancers and caching servers) without affecting the API's functionality.
+
+
+Self-descriptive messages: RESTful APIs should use standard HTTP methods (such as GET, POST, PUT, DELETE) 
+and return HTTP status codes to indicate the success or failure of a request. The API should also include 
+metadata in the form of headers and resource representations to provide additional context and facilitate the transfer of data.
+
+REST is a popular choice for building APIs because it is simple, flexible, and scalable. It is also well-suited
+ for use in a microservices architecture, where different services can be built and deployed independently, and
+  communicate with each other over the web using a RESTful API.
