@@ -56,7 +56,6 @@ function showDisplayButton() {
 resetBtn.addEventListener("click", function(){
     reset()
 })
-
  
 function reset() {
     message.textContent = "Player 1 Turn"
