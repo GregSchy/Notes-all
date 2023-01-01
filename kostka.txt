@@ -50,6 +50,7 @@ function showDisplayButton() {
 })
  
  
+ 
 // 1. Hook a click event listener up with the Reset Button
 // 2. Create a reset() function that resets the game
 // 3. Invoke the reset() function when the Reset Button is clicked
