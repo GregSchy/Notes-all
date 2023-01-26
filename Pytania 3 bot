@@ -1,22 +1,19 @@
 1. Hoisting ---------
 
-
-In JavaScript, hoisting is the behavior of moving declarations to the top of a code block. 
+In JavaScript, hoisting is the behavior of moving declarations to the top of a code block.
 This is done at the creation phase of the execution context, before code execution.
 
     console.log(x);
     var x = 5;
 
 At runtime, the JavaScript interpreter will implicitly move the declaration of
- the x variable to the top of the code block, as if it were written like this:
+the x variable to the top of the code block, as if it were written like this:
 
 var x;
 console.log(x);
 x = 5;
 
-
-
- This behavior is called hoisting because it appears as if the declaration is being "hoisted" to the top of the code block.
+This behavior is called hoisting because it appears as if the declaration is being "hoisted" to the top of the code block.
 
 Hoisting only affects declarations, not assignments. In the example above, the assignment x = 5 remains in place.
 
@@ -25,24 +22,21 @@ It's important to note that hoisting only occurs with declarations, not with ass
 console.log(x);
 x = 5;
 
-
 In this case, the x variable has not been declared, so an error will be thrown when the code is executed.
 
-
 It's also worth noting that hoisting only applies to variables declared with the var keyword.
- Variables declared with let and const are not hoisted, and attempting to access them before 
- they are declared will result in a ReferenceError.
+Variables declared with let and const are not hoisted, and attempting to access them before
+they are declared will result in a ReferenceError.
 
 ==============================
 
 2. REST API --------
 
-
 A REST (Representational State Transfer) API is a type of web service that uses HTTP methods to manipulate data and resources.
- REST APIs are designed to be lightweight, easy to use, and easy to scale.
+REST APIs are designed to be lightweight, easy to use, and easy to scale.
 
 REST APIs typically use the HTTP methods GET, POST, PUT, PATCH, and DELETE to perform operations on resources.
- Here's a brief description of each method:
+Here's a brief description of each method:
 
 GET: Retrieves a resource from the server.
 POST: Creates a new resource on the server.
@@ -50,27 +44,23 @@ PUT: Replaces an existing resource on the server.
 PATCH: Modifies an existing resource on the server.
 DELETE: Deletes a resource from the server.
 
-
 REST APIs use a URI (Uniform Resource Identifier) to identify resources, and HTTP methods to manipulate those resources.
- For example, the following URI identifies a resource representing a list of users:
+For example, the following URI identifies a resource representing a list of users:
 
-
- REST APIs are a popular way to build APIs for web-based systems because they are lightweight and easy to use. 
- They are also easy to scale, since they do not rely on a specific protocol or implementation.
+REST APIs are a popular way to build APIs for web-based systems because they are lightweight and easy to use.
+They are also easy to scale, since they do not rely on a specific protocol or implementation.
 
 REST APIs are not the only way to build APIs, but they are a widely used and well-established standard for building APIs on the web.
-
 
 An API (Application Programming Interface) is a set of rules and protocols that defines how different software systems can
 communicate with each other. APIs are often used to allow one application to access the functionality or data of another application.
 
-
-A REST API (REpresentational State Transfer API) is a type of API that is based on the REST (REpresentational State Transfer) 
+A REST API (REpresentational State Transfer API) is a type of API that is based on the REST (REpresentational State Transfer)
 architecture and uses the HTTP (Hypertext Transfer Protocol) to exchange data between applications.
 
-The difference between an API and a REST API is that a REST API is a specific type of API that is based on the REST 
+The difference between an API and a REST API is that a REST API is a specific type of API that is based on the REST
 architecture and uses HTTP, while an API is a general concept that can include various types of interfaces for programming
- applications, such as REST APIs, GraphQL APIs, etc.
+applications, such as REST APIs, GraphQL APIs, etc.
 
 ===========================
 
@@ -78,126 +68,121 @@ architecture and uses HTTP, while an API is a general concept that can include v
 
 There are several ways to build an API (Application Programming Interface), including the following:
 
-REST APIs: REST (Representational State Transfer) APIs are a popular way to build APIs that use HTTP methods to 
+REST APIs: REST (Representational State Transfer) APIs are a popular way to build APIs that use HTTP methods to
 manipulate data and resources. REST APIs are easy to use, lightweight, and easy to scale.
 
 GraphQL APIs: GraphQL is a query language for APIs that allows clients to request specific data from the server.
- GraphQL APIs are often more flexible than REST APIs, as they allow clients to specify exactly what data they need
-  and receive only that data, rather than a fixed set of data.
+GraphQL APIs are often more flexible than REST APIs, as they allow clients to specify exactly what data they need
+and receive only that data, rather than a fixed set of data.
 
 gRPC APIs: gRPC (Remote Procedure Calls) is a high-performance, open-source RPC framework that uses HTTP/2 for transport.
- gRPC APIs are designed for low-latency, high-throughput scenarios, and are often used for microservices and other distributed systems.
+gRPC APIs are designed for low-latency, high-throughput scenarios, and are often used for microservices and other distributed systems.
 
 Webhooks: A webhook is a way for one system to send data to another system in real-time over HTTP. Webhooks are often used
- to build APIs that allow one system to trigger an action in another system, such as sending a message or triggering a build.
+to build APIs that allow one system to trigger an action in another system, such as sending a message or triggering a build.
 
 Custom APIs: Some APIs are built using a custom protocol or implementation. These APIs may use a proprietary format or
- communication protocol, and may require custom client libraries or SDKs (Software Development Kits) to use.
+communication protocol, and may require custom client libraries or SDKs (Software Development Kits) to use.
 
-There are pros and cons to each of these approaches, and the best choice for a particular API will depend on the needs and 
+There are pros and cons to each of these approaches, and the best choice for a particular API will depend on the needs and
 goals of the API and the systems it will be used with.
-
 
 ===============
 
 4. How to menage state in React
 
 Use React's useState hook to add state to functional components. This hook allows you to add state to a functional
- component by returning an array with two elements: the current state value and a function to update it.
+component by returning an array with two elements: the current state value and a function to update it.
 
 import { useState } from 'react';
 
 function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+// Declare a new state variable, which we'll call "count"
+const [count, setCount] = useState(0);
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
+return (
+<div>
+<p>You clicked {count} times</p>
+<button onClick={() => setCount(count + 1)}>
+Click me
+</button>
+</div>
+);
 }
 
 --Use the state property in a class-based component to add state to a class component. The state property is
- an object that stores values that belong to the component and can be updated using the setState method.
+an object that stores values that belong to the component and can be updated using the setState method.
 
- class Example extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <p>You clicked {this.state.count} times</p>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          Click me
-        </button>
-      </div>
-    );
-  }
+class Example extends React.Component {
+constructor(props) {
+super(props);
+this.state = {
+count: 0
+};
 }
 
+render() {
+return (
+<div>
+<p>You clicked {this.state.count} times</p>
+<button onClick={() => this.setState({ count: this.state.count + 1 })}>
+Click me
+</button>
+</div>
+);
+}
+}
 
---Use the context API to share state across components. The context API allows you to create a context provider 
-that can be consumed by any component in the component tree. This is useful for sharing state that is required 
+--Use the context API to share state across components. The context API allows you to create a context provider
+that can be consumed by any component in the component tree. This is useful for sharing state that is required
 by many components and that should be updated in a centralized location.
-
 
 const MyContext = React.createContext();
 
 class MyProvider extends React.Component {
-  state = {
-    count: 0
-  }
+state = {
+count: 0
+}
 
-  render() {
-    return (
-      <MyContext.Provider value={{
+render() {
+return (
+<MyContext.Provider value={{
         state: this.state,
         incrementCount: () => this.setState({ count: this.state.count + 1 })
       }}>
-        {this.props.children}
-      </MyContext.Provider>
-    );
-  }
+{this.props.children}
+</MyContext.Provider>
+);
+}
 }
 
 function Child() {
-  const { state, incrementCount } = useContext(MyContext);
-  return (
-    <div>
-      <p>You clicked {state.count} times</p>
-      <button onClick={incrementCount}>Click me</button>
-    </div>
-  );
+const { state, incrementCount } = useContext(MyContext);
+return (
+<div>
+<p>You clicked {state.count} times</p>
+<button onClick={incrementCount}>Click me</button>
+</div>
+);
 }
 
 function App() {
-  return (
-    <MyProvider>
-      <Child />
-    </MyProvider>
-  );
+return (
+<MyProvider>
+<Child />
+</MyProvider>
+);
 }
-
 
 =====================
 
-5. Class Components, functional components 
+5. Class Components, functional components
 
 In React, there are two types of components: class-based components and functional components.
 
-Class-based components are defined as JavaScript classes and require you to extend the React.Component 
+Class-based components are defined as JavaScript classes and require you to extend the React.Component
 base class. They have a few additional features compared to functional components, such as the ability
- to have a local state, a lifecycle method, and access to this. Here's an example of a class-based component:
-
+to have a local state, a lifecycle method, and access to this. Here's an example of a class-based component:
 
         class MyComponent extends React.Component {
         state = {
@@ -216,10 +201,9 @@ base class. They have a few additional features compared to functional component
         }
         }
 
-
-Functional components, on the other hand, are just JavaScript functions that accept props as an argument 
+Functional components, on the other hand, are just JavaScript functions that accept props as an argument
 and return a React element. They don't have access to a local state or lifecycle methods, but they are
- simpler and easier to write than class-based components. Here's an example of 
+simpler and easier to write than class-based components. Here's an example of
 a functional component:
 
         function MyComponent(props) {
@@ -231,30 +215,27 @@ a functional component:
         );
         }
 
-
 In general, it's recommended to use functional components whenever possible and only use
- class-based components when you need to add state or lifecycle methods to a component.
+class-based components when you need to add state or lifecycle methods to a component.
 
 ============
 
 6. Lifecycle of component
 
-
-Functional components do not have a lifecycle in the same way that class-based components do. 
+Functional components do not have a lifecycle in the same way that class-based components do.
 In a class-based component, you can define methods that are called at different stages of the component's lifecycle,
- such as when it is mounted to the DOM or when it receives new props. 
+such as when it is mounted to the DOM or when it receives new props.
 These methods include componentDidMount, shouldComponentUpdate, componentDidUpdate, and componentWillUnmount.
 
-Functional components, on the other hand, do not have these lifecycle methods. They are just 
+Functional components, on the other hand, do not have these lifecycle methods. They are just
 simple functions that accept props as an argument and return a React element.
 
 However, functional components can be enhanced with additional functionality using React hooks.
- One such hook is the useEffect hook, which allows you to perform side effects in a functional component. 
- This can be used to simulate lifecycle methods, such as componentDidMount or 
+One such hook is the useEffect hook, which allows you to perform side effects in a functional component.
+This can be used to simulate lifecycle methods, such as componentDidMount or
 componentWillUnmount.
 
 Here's an example of using the useEffect hook to simulate the componentDidMount lifecycle method:
-
 
         import { useEffect } from 'react';
 
@@ -268,24 +249,21 @@ Here's an example of using the useEffect hook to simulate the componentDidMount 
         );
         }
 
-
 It's important to note that the useEffect hook is called after every render, not just once like componentDidMount.
- However, you can control when the effect is executed by passing a second argument to useEffect, which is an array of 
- values that the effect depends on. If you pass an empty array, the effect will only be executed once, when the component is first mounted.
-
+However, you can control when the effect is executed by passing a second argument to useEffect, which is an array of
+values that the effect depends on. If you pass an empty array, the effect will only be executed once, when the component is first mounted.
 
 ====================
 
-
 7. Pass by value and pass by reference
 
-In programming, "pass by value" and "pass by reference" refer to the way in which a 
+In programming, "pass by value" and "pass by reference" refer to the way in which a
 function's arguments are passed when the function is called.
 
 In a "pass by value" language, when you pass an argument to a function, the function
- creates a new memory location for the argument and stores the value of the argument 
- in that location. This means that any changes made to the argument within the function have no effect on the
- original value of the argument outside of the function.
+creates a new memory location for the argument and stores the value of the argument
+in that location. This means that any changes made to the argument within the function have no effect on the
+original value of the argument outside of the function.
 
 For example, in JavaScript, primitive data types (such as numbers and strings) are passed by value. Consider the following code:
 
@@ -297,12 +275,12 @@ For example, in JavaScript, primitive data types (such as numbers and strings) a
         increment(a);
         console.log(a); // Output: 1
 
-In this example, the value of a is passed to the increment function, and a new memory location is 
+In this example, the value of a is passed to the increment function, and a new memory location is
 created for the argument x. The value of x is then incremented, but this change has no effect on the original value of a.
 
-In a "pass by reference" language, when you pass an argument to a function, 
+In a "pass by reference" language, when you pass an argument to a function,
 the function does not create a new memory location for the argument. Instead, the function is given
- a reference to the memory location where the argument is stored. This means that any changes 
+a reference to the memory location where the argument is stored. This means that any changes
 made to the argument within the function are reflected in the original value of the argument outside of the function.
 
 For example, in JavaScript, objects (including arrays) are passed by reference. Consider the following code:
@@ -316,7 +294,7 @@ For example, in JavaScript, objects (including arrays) are passed by reference. 
         console.log(a); // Output: [1]
 
 In this example, the value of a is passed to the addToArray function, and the function is given a reference
- to the memory location where the array is stored. The function then pushes a new element to the array, which modifies the original array.
+to the memory location where the array is stored. The function then pushes a new element to the array, which modifies the original array.
 
 It's important to understand the difference between pass by value and pass by reference, as it can affect the way you write your code and the way your program behaves.
 
@@ -326,10 +304,10 @@ It's important to understand the difference between pass by value and pass by re
 
 Firebase can be used in a variety of ways by front-end developers. Some common uses of Firebase for front-end development include:
 
-Real-time database: Firebase provides a real-time database that can be used to store and sync data across multiple devices in real-time. 
+Real-time database: Firebase provides a real-time database that can be used to store and sync data across multiple devices in real-time.
 This can be useful for building applications that need to display live data or that require frequent updates.
 
-User authentication: Firebase provides built-in support for user authentication, including support for popular identity providers 
+User authentication: Firebase provides built-in support for user authentication, including support for popular identity providers
 like Google, Facebook, and more. This can be useful for building applications that require user login or that need to manage user permissions.
 
 Hosting: Firebase provides hosting for static websites and web applications, which can be useful for quickly deploying front-end projects.
@@ -340,13 +318,12 @@ Analytics: Firebase provides analytics tools that can be used to track user beha
 
 Overall, Firebase is a powerful platform that can be used by front-end developers to build and manage a variety of applications.
 
-
 ============
 
 9. == and === operator
 
 In JavaScript, the double equals operator (==) is used to compare the values of two operands,
- while the triple equals operator (===) is used to compare the values and types of two operands.
+while the triple equals operator (===) is used to compare the values and types of two operands.
 
 Here are some examples to illustrate the difference between == and ===:
 
@@ -355,46 +332,43 @@ Here are some examples to illustrate the difference between == and ===:
     console.log(null == undefined); // true, because both null and undefined are considered equal values
     console.log(null === undefined); // false, because null and undefined are different types
 
-
 As a general rule, it is recommended to use the triple equals operator (===) whenever possible,
- as it provides more strict type checking and can help prevent unintended type coercion. However, 
- there are some cases where the double equals operator (==) may be useful, such as when comparing values that might be null or undefined.
+as it provides more strict type checking and can help prevent unintended type coercion. However,
+there are some cases where the double equals operator (==) may be useful, such as when comparing values that might be null or undefined.
 
 ======
 
 10. ES5 vs. ES6 difference
 
-
 ECMAScript 5 (also known as ES5) and ECMAScript 6 (also known as ES6 or ECMAScript 2015) are versions
- of the JavaScript programming language. ES5 was released in 2009 and is the current version supported
-  by all modern browsers. ES6 was released in 2015 and introduced several new features to the
- language, which are not supported by older browsers.
+of the JavaScript programming language. ES5 was released in 2009 and is the current version supported
+by all modern browsers. ES6 was released in 2015 and introduced several new features to the
+language, which are not supported by older browsers.
 
 Here are some of the main differences between ES5 and ES6:
 
-let and const: In ES6, the let and const keywords were introduced as alternatives to var for declaring variables. 
-let is used to declare a block-scoped variable, which means that it is only accessible within the block 
-(a block is defined as a set of curly braces) in which it is defined. const is used to declare a read-only 
+let and const: In ES6, the let and const keywords were introduced as alternatives to var for declaring variables.
+let is used to declare a block-scoped variable, which means that it is only accessible within the block
+(a block is defined as a set of curly braces) in which it is defined. const is used to declare a read-only
 variable, which means that the value of the variable cannot be reassigned.
 
-Arrow functions: In ES6, a new syntax for writing functions was introduced, called arrow functions. 
+Arrow functions: In ES6, a new syntax for writing functions was introduced, called arrow functions.
 Arrow functions are shorter and easier to read than traditional function expressions, and they do not have their own this value.
 
 Classes: In ES6, the class keyword was introduced, which allows you to define classes in a syntax
- that is similar to other object-oriented programming languages.
+that is similar to other object-oriented programming languages.
 
 Template literals: In ES6, template literals were introduced, which are string literals that
- can contain placeholders for variables. Template literals make it easier to build strings that contain variables or expressions.
+can contain placeholders for variables. Template literals make it easier to build strings that contain variables or expressions.
 
 Modules: In ES6, the import and export keywords were introduced, which allow you to split
- your code into separate modules and import or export functions, objects, and other values between them.
+your code into separate modules and import or export functions, objects, and other values between them.
 
 ====
 
 11. Classes in Javascript
 
-
-In JavaScript, a class is a template for creating objects. It is a way to define 
+In JavaScript, a class is a template for creating objects. It is a way to define
 a blueprint for an object, and to create objects from that blueprint.
 
 Here is an example of how you can define a class in JavaScript:
@@ -411,30 +385,29 @@ Here is an example of how you can define a class in JavaScript:
     }
 
 In this example, we define a class called Person that has a constructor function and a sayHello method.
- The constructor function is used to initialize the object with the specified name and age properties. 
- The sayHello method is a function that prints a greeting to the console.
+The constructor function is used to initialize the object with the specified name and age properties.
+The sayHello method is a function that prints a greeting to the console.
 
 To create an object from the Person class, we can use the new keyword followed by the class name:
 
     const person1 = new Person('John', 30);
     person1.sayHello(); // prints "Hello, my name is John and I am 30 years old."
 
-In this example, we create a new Person object with the name "John" and the age 30. We then call the sayHello method on the object, 
+In this example, we create a new Person object with the name "John" and the age 30. We then call the sayHello method on the object,
 which prints the greeting to the console.
 
-Classes in JavaScript are a powerful tool for creating and organizing objects, and they are an important part 
+Classes in JavaScript are a powerful tool for creating and organizing objects, and they are an important part
 of the object-oriented programming paradigm. If you are interested in learning more about classes in JavaScript,
- you can consult the official documentation or other resources online.
+you can consult the official documentation or other resources online.
 
+=============
 
- =============
+12. Reconciliation algorithm/Diffing in react
 
- 12. Reconciliation algorithm/Diffing in react
-
- In React, "diffing" refers to the process of comparing the virtual DOM (a lightweight in-memory representation
-  of the actual DOM) with the previous version of the virtual DOM to determine which DOM elements have changed.
-   React uses this information to optimize the rendering of components and minimize the number of DOM updates
-    that need to be made.
+In React, "diffing" refers to the process of comparing the virtual DOM (a lightweight in-memory representation
+of the actual DOM) with the previous version of the virtual DOM to determine which DOM elements have changed.
+React uses this information to optimize the rendering of components and minimize the number of DOM updates
+that need to be made.
 
 Here's how diffing works in React:
 
@@ -443,27 +416,24 @@ When a component's state or props change, React creates a new virtual DOM tree f
 React compares the new virtual DOM tree with the previous version of the tree to determine which elements have changed.
 
 If React determines that an element has changed, it updates the corresponding DOM element. If an element has been removed,
- React removes it from the DOM. If an element has been added, React adds it to the DOM.
+React removes it from the DOM. If an element has been added, React adds it to the DOM.
 
 If React determines that a component's state or props have not changed, it does not update the corresponding DOM elements.
- This helps to improve the performance of the application by minimizing unnecessary DOM updates.
+This helps to improve the performance of the application by minimizing unnecessary DOM updates.
 
 React uses a heuristic approach to diffing that is optimized for the common case, but it is not always able to determine
- the most efficient way to update the DOM. In some cases, you may need to use the shouldComponentUpdate() lifecycle method
-  to optimize the diffing process by telling React whether or not to update a component based on specific conditions.
+the most efficient way to update the DOM. In some cases, you may need to use the shouldComponentUpdate() lifecycle method
+to optimize the diffing process by telling React whether or not to update a component based on specific conditions.
 
+===========
 
-  ===========
+13. Props
 
-
-  13. Props
-
-  In React, props (short for "properties") are a way of passing data from a parent component 
-  to a child component. Props are read-only in the child component, which means that the child 
-  component cannot modify the props that it receives.
+In React, props (short for "properties") are a way of passing data from a parent component
+to a child component. Props are read-only in the child component, which means that the child
+component cannot modify the props that it receives.
 
 Here's an example of how to use props in a React component:
-
 
     import React from 'react';
 
@@ -477,25 +447,20 @@ Here's an example of how to use props in a React component:
       return <Welcome name="Alice" />;
     }
 
-
 In this example, the Welcome component is a parent component that takes a prop called name. The App component
- is a child component that renders the Welcome component and passes a value for the name prop. When the Welcome 
- component is rendered, it will display a greeting message with the value of the name prop.
+is a child component that renders the Welcome component and passes a value for the name prop. When the Welcome
+component is rendered, it will display a greeting message with the value of the name prop.
 
-Props can be used to pass any type of data, including strings, numbers, arrays, and objects. 
-You can also use props to pass functions or other React components as values.    
-
-
+Props can be used to pass any type of data, including strings, numbers, arrays, and objects.
+You can also use props to pass functions or other React components as values.
 
 ==============================
 
-
 14. Lifecycle of component
 
-
-In React, a component's lifecycle refers to the different stages of its existence, 
+In React, a component's lifecycle refers to the different stages of its existence,
 from when it is first created to when it is destroyed. During its lifecycle, a component
- can perform various actions and react to changes in its state or props.
+can perform various actions and react to changes in its state or props.
 
 Here is an overview of the lifecycle of a React component:
 
@@ -507,7 +472,7 @@ Mounting: This is the process of initializing a component and rendering it to th
 
     -componentDidMount(): This method is called after the component is rendered to the DOM. You can use it to perform any necessary DOM manipulation or make API calls.
 
-Updating: This is the process of updating a component's state or props and re-rendering it to the DOM. The following lifecycle methods 
+Updating: This is the process of updating a component's state or props and re-rendering it to the DOM. The following lifecycle methods
 are called during the updating phase:
 
     -shouldComponentUpdate(): This method is called before the component is updated. You can use it to optimize the update process by
@@ -518,7 +483,7 @@ are called during the updating phase:
     -getSnapshotBeforeUpdate(): This method is called just before the DOM is updated with the new component.
     You can use it to capture any information that you need to use after the update has been applied.
 
-    -componentDidUpdate(): This method is called after the component has been updated and the DOM has been updated 
+    -componentDidUpdate(): This method is called after the component has been updated and the DOM has been updated
     with the new component. You can use it to perform any necessary DOM manipulation or make API calls.
 
 Unmounting: This is the process of destroying a component and removing it from the DOM. The following lifecycle method is called during the unmounting phase:
@@ -528,14 +493,13 @@ Unmounting: This is the process of destroying a component and removing it from t
 
 ======================
 
-
 15. Component in React
 
-In React, a component is a piece of code that represents a part of a user interface. 
+In React, a component is a piece of code that represents a part of a user interface.
 It is a reusable piece of code that can be used to render a specific piece of UI (user interface) in a declarative way.
 
 A component can either be a function or a class, and it typically takes in input (props)
- and returns a tree of components that is rendered to the DOM.
+and returns a tree of components that is rendered to the DOM.
 
 Here is an example of a functional component in React:
 
@@ -551,7 +515,6 @@ Here is an example of a functional component in React:
     };
 
     export default MyComponent;
-
 
 And here is an example of a class-based component:
 
@@ -569,7 +532,6 @@ And here is an example of a class-based component:
     }
 
     export default MyComponent;
-
 
 You can use a component by importing it into another file and rendering it in the JSX code:
 
@@ -591,13 +553,13 @@ You can use a component by importing it into another file and rendering it in th
 16. What is JSX
 
 JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows you
- to write HTML-like code in your JavaScript files. It was designed to make it easier for 
- developers to build user interfaces by allowing them to write declarative code that looks 
- like HTML, but is actually a syntax that gets compiled into JavaScript.
+to write HTML-like code in your JavaScript files. It was designed to make it easier for
+developers to build user interfaces by allowing them to write declarative code that looks
+like HTML, but is actually a syntax that gets compiled into JavaScript.
 
-JSX is not a standalone programming language, but rather a syntax extension for JavaScript. 
+JSX is not a standalone programming language, but rather a syntax extension for JavaScript.
 It is typically used in combination with React, a JavaScript library for building user interfaces,
- but it can also be used with other libraries and frameworks.
+but it can also be used with other libraries and frameworks.
 
 Here is an example of JSX code:
 
@@ -615,41 +577,39 @@ Here is an example of JSX code:
     );
 
 In this example, the JSX code is used to create a virtual DOM element, which is then rendered to the actual
- DOM using the ReactDOM.render() method.
+DOM using the ReactDOM.render() method.
 
 JSX code looks similar to HTML, but it has a few key differences. For example, JSX uses camelCase syntax for
- attributes and elements must be closed. Additionally, you can use JavaScript expressions within JSX code by enclosing them in curly braces.
+attributes and elements must be closed. Additionally, you can use JavaScript expressions within JSX code by enclosing them in curly braces.
 ========
 
 17. XML
 
-
- JavaScript is a programming language that is commonly used in web development. It is a client-side scripting language,
-  which means that it is executed by the user's web browser rather than on the web server. JavaScript is often used to
-   add interactive elements to web pages, such as form validation, creating drop-down menus, and creating animations.
+JavaScript is a programming language that is commonly used in web development. It is a client-side scripting language,
+which means that it is executed by the user's web browser rather than on the web server. JavaScript is often used to
+add interactive elements to web pages, such as form validation, creating drop-down menus, and creating animations.
 
 XML (eXtensible Markup Language) is a markup language that is used to structure, store, and transport data. It is a text-based
- format that is designed to be both human-readable and machine-readable. XML is often used to store and transmit data over the internet, 
- such as in web services or in RSS feeds.
+format that is designed to be both human-readable and machine-readable. XML is often used to store and transmit data over the internet,
+such as in web services or in RSS feeds.
 
 JavaScript can be used to parse and manipulate XML data, as well as to interact with XML documents using the Document Object Model (DOM).
- For example, a JavaScript program could use the DOM to access and modify the contents of an XML document, or to send and receive XML
-  data from a web server using an XMLHttpRequest.
+For example, a JavaScript program could use the DOM to access and modify the contents of an XML document, or to send and receive XML
+data from a web server using an XMLHttpRequest.
 
+=====
 
-  =====
+18. DOM
 
-  18. DOM
+In the context of web development, the Document Object Model (DOM) is a programming interface for HTML and XML documents.
+It represents the structure of a document as a tree of objects, with each object representing a part of the document
+(such as an element, an attribute, or a piece of text).
 
-  In the context of web development, the Document Object Model (DOM) is a programming interface for HTML and XML documents.
-   It represents the structure of a document as a tree of objects, with each object representing a part of the document
-    (such as an element, an attribute, or a piece of text).
-
-React is a JavaScript library for building user interfaces. It allows developers to create reusable components that can be 
+React is a JavaScript library for building user interfaces. It allows developers to create reusable components that can be
 rendered to the DOM. When a component is rendered, React compares the current version of the component in the DOM to the
- desired version, and makes the necessary changes to the DOM to bring it in line with the desired version. This process is known as "reconciliation."
+desired version, and makes the necessary changes to the DOM to bring it in line with the desired version. This process is known as "reconciliation."
 
-In summary, the DOM is a tree-like representation of an HTML or XML document, and React is a library that allows developers 
+In summary, the DOM is a tree-like representation of an HTML or XML document, and React is a library that allows developers
 to create and manipulate DOM elements using reusable components.
 
 ===
@@ -658,7 +618,7 @@ to create and manipulate DOM elements using reusable components.
 
 There are several ways to handle errors in React:
 
-Using the try and catch statements: You can use the try and catch statements to handle errors in your React components. 
+Using the try and catch statements: You can use the try and catch statements to handle errors in your React components.
 This can be useful for handling errors that occur during rendering, for example.
 
     class MyComponent extends React.Component {
@@ -671,7 +631,7 @@ This can be useful for handling errors that occur during rendering, for example.
       }
     }
 
--Using the componentDidCatch lifecycle method: React provides a lifecycle method called componentDidCatch that 
+-Using the componentDidCatch lifecycle method: React provides a lifecycle method called componentDidCatch that
 can be used to handle errors that occur in a component's render method or in the lifecycle methods of its children.
 
     class MyComponent extends React.Component {
@@ -694,8 +654,8 @@ can be used to handle errors that occur in a component's render method or in the
       }
     }
 
--Using the Error Boundaries feature: React 16.0 introduced a new feature called "Error Boundaries" that allows you to define a 
-boundary in your application where errors can be caught and handled. An error boundary is a class component that 
+-Using the Error Boundaries feature: React 16.0 introduced a new feature called "Error Boundaries" that allows you to define a
+boundary in your application where errors can be caught and handled. An error boundary is a class component that
 implements the componentDidCatch lifecycle method. Any components within the boundary will be caught by the error boundary if they throw an error.
 
     class ErrorBoundary extends React.Component {
@@ -733,22 +693,20 @@ implements the componentDidCatch lifecycle method. Any components within the bou
       document.getElementById('root')
     );
 
-Error boundaries can be useful for handling errors that might occur in a part of your application that is not 
+Error boundaries can be useful for handling errors that might occur in a part of your application that is not
 directly under your control, such as a third-party library or a child component.
 
-There are several other ways to handle errors in React, but these are some of the most common approaches. 
+There are several other ways to handle errors in React, but these are some of the most common approaches.
 It is important to have a good error handling strategy in place to ensure that your application is stable and reliable.
-
 
 ====
 
-20.  When is it appropriate to use context in React? 
-
+20. When is it appropriate to use context in React?
 
 In React, context is a feature that allows you to pass data through the component tree without having to
- pass props down manually at every level. It is often used when you have data that needs to be accessible 
- by many components within an application, but the data does not fit naturally into the props hierarchy
-  of your component tree.
+pass props down manually at every level. It is often used when you have data that needs to be accessible
+by many components within an application, but the data does not fit naturally into the props hierarchy
+of your component tree.
 
 There are a few situations where it might be appropriate to use context in React:
 
@@ -756,44 +714,43 @@ When you have a deeply nested component tree and you don't want to pass props do
 
 When you have a piece of data that is shared by many components, and the data does not change frequently.
 
-When you want to avoid prop drilling, which is the process of passing props down through multiple levels of components 
+When you want to avoid prop drilling, which is the process of passing props down through multiple levels of components
 to reach the components that need the data.
 
-It is generally recommended to use context sparingly, as it can make it more difficult to understand how data is being 
-passed around in a large application. It is often better to use props to pass data down through the component tree, as 
-this makes it easier to understand the flow of data in your application. However, in certain situations, context can be 
+It is generally recommended to use context sparingly, as it can make it more difficult to understand how data is being
+passed around in a large application. It is often better to use props to pass data down through the component tree, as
+this makes it easier to understand the flow of data in your application. However, in certain situations, context can be
 a useful tool for making data available to many components without the need for prop drilling.
 
 ===
 
 21. What is REST
 
-REST (Representational State Transfer) is an architectural style for building web services. It is based on a 
+REST (Representational State Transfer) is an architectural style for building web services. It is based on a
 set of principles that define how web resources should be structured and accessed over the web.
 
 REST is often used for building APIs (Application Programming Interfaces) that allow different systems
- to communicate with each other over the web. APIs built using REST principles are called RESTful APIs.
+to communicate with each other over the web. APIs built using REST principles are called RESTful APIs.
 
 Some key principles of REST include:
 
-  - Client-server architecture: In a RESTful system, the client and server are separate, independent components
+- Client-server architecture: In a RESTful system, the client and server are separate, independent components
   that communicate through a well-defined interface.
 
-  - Statelessness: RESTful APIs do not maintain state between requests. This means that each request from a 
+- Statelessness: RESTful APIs do not maintain state between requests. This means that each request from a
   client should contain all the information necessary for the server to fulfill the request.
 
-  - Cacheability: RESTful APIs should be designed in such a way that responses can be cached by the client 
+- Cacheability: RESTful APIs should be designed in such a way that responses can be cached by the client
   or by intermediaries (such as a CDN). This can improve performance and scalability by reducing the number of
-   requests that need to be made to the server.
+  requests that need to be made to the server.
 
-  - Layered system: A RESTful API can be used by multiple clients over different networks and can include multiple 
+- Layered system: A RESTful API can be used by multiple clients over different networks and can include multiple
   intermediaries (such as load balancers and caching servers) without affecting the API's functionality.
 
-
-Self-descriptive messages: RESTful APIs should use standard HTTP methods (such as GET, POST, PUT, DELETE) 
-and return HTTP status codes to indicate the success or failure of a request. The API should also include 
+Self-descriptive messages: RESTful APIs should use standard HTTP methods (such as GET, POST, PUT, DELETE)
+and return HTTP status codes to indicate the success or failure of a request. The API should also include
 metadata in the form of headers and resource representations to provide additional context and facilitate the transfer of data.
 
 REST is a popular choice for building APIs because it is simple, flexible, and scalable. It is also well-suited
- for use in a microservices architecture, where different services can be built and deployed independently, and
-  communicate with each other over the web using a RESTful API.
+for use in a microservices architecture, where different services can be built and deployed independently, and
+communicate with each other over the web using a RESTful API.
