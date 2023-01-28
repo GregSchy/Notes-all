@@ -491,6 +491,7 @@ Unmounting: This is the process of destroying a component and removing it from t
     -componentWillUnmount(): This method is called just before the component is unmounted and destroyed.
     You can use it to perform any necessary cleanup, such as canceling network requests or removing event listeners.
 
+
 ======================
 
 15. Component in React
