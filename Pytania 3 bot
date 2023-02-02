@@ -495,6 +495,7 @@ Unmounting: This is the process of destroying a component and removing it from t
 
 ======================
 
+
 15. Component in React
 
 In React, a component is a piece of code that represents a part of a user interface.
