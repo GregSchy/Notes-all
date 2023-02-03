@@ -80,9 +80,52 @@ Function Expression is another way to define a function in JavaScript.
   React vs Angular differences
 
   React is written in JavaSctript when Angular is written in typescript
+
   
+  React and Angular are both popular JavaScript frameworks for building web applications, but they have some key differences:
+
+1. Architecture: Angular uses a fully-featured framework with a set of tools, while React is just a library for building user interfaces.
+
+2. Language: Angular uses TypeScript, a statically-typed superset of JavaScript, while React uses JavaScript.
+
+3. DOM: Angular uses a real DOM (Document Object Model), while React uses a virtual DOM, which allows for faster updates and rendering.
+
+4. Data Binding: Angular uses two-way data binding, where any changes to the model are reflected in the view and vice versa,
+ while React uses one-way data flow, where changes to the model only affect the view.
+
+5. Size: Angular has a larger size and complexity compared to React, which can lead to slower load times and a 
+steeper learning curve for new developers.
+
+6. Performance: React is known for its high performance, particularly when dealing with complex user interfaces,
+ while Angular's performance can sometimes be impacted by its two-way data binding and real DOM.
+
+7. Community: React has a larger and more active community compared to Angular, with more available resources 
+and a wider range of tools and libraries.
+
+Ultimately, the choice between React and Angular will depend on the specific needs of a project and the preferences of the development team.
 
   =================================
+
+  Data Binding in React
+
+Data binding in React refers to the process of synchronizing data between the component
+ state and the UI (User Interface) render. React uses a one-way data flow, where data is
+  passed down from parent components to child components through props.
+
+This means that changes made to the component state are reflected in the UI, but changes
+ made to the UI do not affect the component state directly. Instead, the component state
+  must be updated explicitly through events triggered by the user, such as clicking a button.
+
+React uses a virtual DOM to update the UI efficiently, ensuring that only the necessary
+ parts of the UI are re-rendered when the component state changes. This leads to improved
+  performance and a more responsive user interface.
+
+In short, data binding in React involves passing data from the component state to the UI
+ through props and using the virtual DOM to keep the UI in sync with the component state.
+
+
+=============================
+
 
   Statically vs. Dynamically typed language
 
