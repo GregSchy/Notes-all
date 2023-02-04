@@ -101,6 +101,7 @@ function Example() {
 const [count, setCount] = useState(0);
 
 return (
+
 <div>
 <p>You clicked {count} times</p>
 <button onClick={() => setCount(count + 1)}>
@@ -123,6 +124,7 @@ count: 0
 
 render() {
 return (
+
 <div>
 <p>You clicked {this.state.count} times</p>
 <button onClick={() => this.setState({ count: this.state.count + 1 })}>
@@ -159,6 +161,7 @@ return (
 function Child() {
 const { state, incrementCount } = useContext(MyContext);
 return (
+
 <div>
 <p>You clicked {state.count} times</p>
 <button onClick={incrementCount}>Click me</button>
@@ -491,10 +494,7 @@ Unmounting: This is the process of destroying a component and removing it from t
     -componentWillUnmount(): This method is called just before the component is unmounted and destroyed.
     You can use it to perform any necessary cleanup, such as canceling network requests or removing event listeners.
 
-
-
 ======================
-
 
 15. Component in React
 
@@ -757,3 +757,26 @@ metadata in the form of headers and resource representations to provide addition
 REST is a popular choice for building APIs because it is simple, flexible, and scalable. It is also well-suited
 for use in a microservices architecture, where different services can be built and deployed independently, and
 communicate with each other over the web using a RESTful API.
+
+==
+
+Micro and macro tasks
+
+The event loop in JavaScript is responsible for executing JavaScript code and managing the microtasks and macrotasks
+that are queued up for execution. The event loop works by processing a series of tasks, known as the "task queue," one at a time.
+
+Here's how microtasks and macrotasks are processed in the event loop:
+
+1. The JavaScript engine first processes any pending microtasks. This includes executing any callbacks associated
+   with Promises, process.nextTick(), and MutationObserver.
+
+2. Once all pending microtasks have been processed, the engine moves on to the next macrotask in the task queue.
+   This could be a setTimeout() or setInterval() callback, a requestAnimationFrame() callback, or an I/O operation.
+   The engine executes the callback or completes the I/O operation, then continues on to the next macrotask in the queue.
+
+3. The event loop continues to cycle between processing microtasks and macrotasks until there are no more tasks in
+   the task queue. At this point, the event loop will block until a new task is added to the queue.
+
+It's important to note that the event loop is single-threaded, meaning that only one task can be executed at a
+time. However, the engine can use multiple threads to handle I/O operations, allowing it to execute multiple I/O-bound
+tasks in parallel.
