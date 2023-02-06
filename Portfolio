@@ -18,3 +18,18 @@ Macro - fetch, setInterval,
 Asynchroniczność callback vs promise
 
 3 sposób, przy pomocy xml http request, podanie żeby zapytanie nie było asynchroniczne!!!!!!!!!
+
+1. Callback np setTimeout który zwraca funkcję
+2. Promise np fetch
+
+promis chaining
+
+===
+
+Event bubbling
+
+event capturing
+
+closure funkcji
+
+get vs post
