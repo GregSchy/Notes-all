@@ -1,8 +1,15 @@
-function sum(a) {
-  return function (b) {
-    return a + b;
-  };
+function getPromiseForUserData() {
+  return new Promise((resolve) => {
+    fetchDataFromServerAsync().then(function (user) {
+      resolve(user);
+    });
+  });
 }
 
-const add5 = sum(5);
-console.log(add5(3));
+async function getPromiseForUserData() {
+  const user = await fetchDataFromServerAsync;
+  return user;
+}
+
+const promise = getPromiseForUserData();
+z;
