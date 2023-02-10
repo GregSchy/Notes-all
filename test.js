@@ -12,3 +12,5 @@ async function getPromiseForUserData() {
 }
 
 const promise = getPromiseForUserData();
+
+s
