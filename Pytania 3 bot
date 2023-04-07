@@ -9,6 +9,7 @@ This is done at the creation phase of the execution context, before code executi
 At runtime, the JavaScript interpreter will implicitly move the declaration of
 the x variable to the top of the code block, as if it were written like this:
 
+
 var x;
 console.log(x);
 x = 5;
