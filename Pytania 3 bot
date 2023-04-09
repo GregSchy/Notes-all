@@ -3,11 +3,13 @@
 In JavaScript, hoisting is the behavior of moving declarations to the top of a code block.
 This is done at the creation phase of the execution context, before code execution.
 
+
     console.log(x);
     var x = 5;
 
 At runtime, the JavaScript interpreter will implicitly move the declaration of
 the x variable to the top of the code block, as if it were written like this:
+
 
 
 var x;
