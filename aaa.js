@@ -1,1 +1,2 @@
-console.log('jsjsjs')
+console.log(x)
+var x = 5
