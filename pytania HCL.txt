@@ -1,0 +1,22 @@
+1.Currying
+
+Currying is a technique used in functional programming where
+ a function that takes multiple arguments is transformed into
+  a series of functions that take a single argument each.
+   JavaScript and React, being both functional programming
+    languages, support currying.
+
+
+In React, currying can be used to create higher-order components
+ (HOCs) that wrap other components with additional behavior.
+
+Currying can provide benefits such as increased reusability, composability, and 
+modularity in functional programming. It allows you to create more flexible and
+ dynamic functions in JavaScript and leverage higher-order components in React 
+ to enhance component behavior.
+
+CLOSURE In JavaScript, a closure is a function that retains access to variables 
+from its surrounding (enclosing) lexical scope even after the surrounding function
+ has completed execution. In other words, a closure "closes over" the variables
+  it references, allowing the function to continue accessing those variables
+   even when it is invoked elsewhere.
