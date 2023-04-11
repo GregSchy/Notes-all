@@ -1,0 +1,12 @@
+1.Currying
+
+Currying is a technique used in functional programming where
+ a function that takes multiple arguments is transformed into
+  a series of functions that take a single argument each.
+   JavaScript and React, being both functional programming
+    languages, support currying.
+
+
+In React, currying can be used to create higher-order components (HOCs) that wrap other components with additional behavior. Here's an example of a curried HOC in React:
+
+jsx
