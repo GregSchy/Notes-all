@@ -3,14 +3,11 @@
 In JavaScript, hoisting is the behavior of moving declarations to the top of a code block.
 This is done at the creation phase of the execution context, before code execution.
 
-
     console.log(x);
     var x = 5;
 
 At runtime, the JavaScript interpreter will implicitly move the declaration of
 the x variable to the top of the code block, as if it were written like this:
-
-
 
 var x;
 console.log(x);
@@ -34,8 +31,6 @@ they are declared will result in a ReferenceError.
 ==============================
 
 2. REST API --------
-
-
 
 A REST (Representational State Transfer) API is a type of web service that uses HTTP methods to manipulate data and resources.
 REST APIs are designed to be lightweight, easy to use, and easy to scale.
@@ -765,7 +760,7 @@ communicate with each other over the web using a RESTful API.
 
 ==
 
-Micro and macro tasks
+22. Micro and macro tasks
 
 The event loop in JavaScript is responsible for executing JavaScript code and managing the microtasks and macrotasks
 that are queued up for execution. The event loop works by processing a series of tasks, known as the "task queue," one at a time.
@@ -785,3 +780,20 @@ Here's how microtasks and macrotasks are processed in the event loop:
 It's important to note that the event loop is single-threaded, meaning that only one task can be executed at a
 time. However, the engine can use multiple threads to handle I/O operations, allowing it to execute multiple I/O-bound
 tasks in parallel.
+
+====
+
+23. Hooks
+
+React hooks are functions that allow functional components to use state and lifecycle features
+without using class components. Examples of commonly used hooks in React are:
+
+useState: Allows functional components to declare and manage local state.
+
+useEffect: Allows functional components to perform side effects, such as fetching data or updating the DOM, after the component has rendered.
+
+useContext: Allows functional components to access context data, which can be shared across components in the component tree.
+
+useReducer: Allows functional components to manage state using a reducer pattern, similar to Redux.
+
+Hooks were introduced in React 16.8 and are recommended for managing state and side effects in functional components.
