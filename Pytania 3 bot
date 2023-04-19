@@ -306,6 +306,7 @@ It's important to understand the difference between pass by value and pass by re
 
 8. FIrebase
 
+
 Firebase can be used in a variety of ways by front-end developers. Some common uses of Firebase for front-end development include:
 
 Real-time database: Firebase provides a real-time database that can be used to store and sync data across multiple devices in real-time.
