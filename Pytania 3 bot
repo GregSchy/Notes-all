@@ -799,3 +799,9 @@ useContext: Allows functional components to access context data, which can be sh
 useReducer: Allows functional components to manage state using a reducer pattern, similar to Redux.
 
 Hooks were introduced in React 16.8 and are recommended for managing state and side effects in functional components.
+
+
+==
+
+24. What is the difference between controlled and uncontrolled components in React?
+
