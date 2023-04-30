@@ -30,6 +30,7 @@ they are declared will result in a ReferenceError.
 
 ==============================
 
+
 2. REST API --------
 
 A REST (Representational State Transfer) API is a type of web service that uses HTTP methods to manipulate data and resources.
@@ -304,6 +305,7 @@ It's important to understand the difference between pass by value and pass by re
 ===============
 
 8. FIrebase
+
 
 Firebase can be used in a variety of ways by front-end developers. Some common uses of Firebase for front-end development include:
 
@@ -797,3 +799,13 @@ useContext: Allows functional components to access context data, which can be sh
 useReducer: Allows functional components to manage state using a reducer pattern, similar to Redux.
 
 Hooks were introduced in React 16.8 and are recommended for managing state and side effects in functional components.
+
+
+==
+
+24. What is the difference between controlled and uncontrolled components in React?
+
+
+
+s
+ss
