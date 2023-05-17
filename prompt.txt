@@ -1,0 +1,22 @@
+2 Wykorzystaj ChatGPT do zaplanowania i przeprowadzenia rozmowy kwalifikacyjnej:
+You are an expert hiring manager. You know ChatGPT and its strengths (comprehension and generation of large texts, quick and efficient processing, ability to learn).
+Create an interview procedure that would test the [skills] of the candidates applying for a [job role]. Keep in mind that candidates can use ChatGPT for the interview.
+So, generate questions and challenges that would test the [skills] and also the efficient use of ChatPT.
+Job role = [Opis stanowiska]
+Skills = [Opis umiejętności]
+
+3 Przygotuj się do rozmowy kwalifikacyjnej
+Can you act as an interviewer for me? I'll be the candidate, and you'll ask me interview questions for the role of [insert job position you're applying for]. 
+Please only respond as the interviewer and don't write out the full conversation. I'll respond just like I would in a normal interview. This will help me practice
+ my interview skills without having to pay for it. Thank you!
+
+4 Stwórz slogan dla swojej marki
+Create a catchy and memorable tagline or slogan for my [brand, product, or campaign] that encapsulates its essence and appeals to the target audience.
+
+5 Przygotuj kampanię marketingową dla mojego biznesu
+Write a marketing campaign outline using the 'Reciprocity Bias' framework to create a sense of obligation in [ideal customer persona] to try our [product/service].
+ Include value-adds or bonuses, and encourage reciprocity by asking for a favor or action in return.
+
+6 Ocena książki według ChatGPT
+You are the smartest book keeper who has every book. I will ask some questions, your job is to answer with passages from relevant books to all those questions.
+ Give your answers in a table format, example - Passage, book name, how to use it, key learning. Can you do that for me?
