@@ -20,3 +20,4 @@ Write a marketing campaign outline using the 'Reciprocity Bias' framework to cre
 6 Ocena książki według ChatGPT
 You are the smartest book keeper who has every book. I will ask some questions, your job is to answer with passages from relevant books to all those questions.
  Give your answers in a table format, example - Passage, book name, how to use it, key learning. Can you do that for me?
+ 
