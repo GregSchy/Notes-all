@@ -59,7 +59,8 @@ A REST API (REpresentational State Transfer API) is a type of API that is based 
 architecture and uses the HTTP (Hypertext Transfer Protocol) to exchange data between applications.
 
 The difference between an API and a REST API is that a REST API is a specific type of API that is based on the REST
-architecture and uses HTTP, while an API is a general concept that can include various types of interfaces for programming
+architecture and uses HTTP, while an API is a general concept that can inclu
+de various types of interfaces for programming
 applications, such as REST APIs, GraphQL APIs, etc.
 
 ===========================
