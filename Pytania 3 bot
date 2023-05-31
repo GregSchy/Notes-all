@@ -32,7 +32,6 @@ they are declared will result in a ReferenceError.
 
 2. REST API --------
 
-s
 A REST (Representational State Transfer) API is a type of web service that uses HTTP methods to manipulate data and resources.
 REST APIs are designed to be lightweight, easy to use, and easy to scale.
 
@@ -63,7 +62,7 @@ The difference between an API and a REST API is that a REST API is a specific ty
 architecture and uses HTTP, while an API is a general concept that can include various types of interfaces for programming
 applications, such as REST APIs, GraphQL APIs, etc.
 
-s===========================
+===========================
 
 3. Methods of building API
 
