@@ -30,7 +30,7 @@ they are declared will result in a ReferenceError.
 
 ==============================
 
-2. REST API --------
+s 2. REST API --------
 
 A REST (Representational State Transfer) API is a type of web service that uses HTTP methods to manipulate data and resources.
 REST APIs are designed to be lightweight, easy to use, and easy to scale.
