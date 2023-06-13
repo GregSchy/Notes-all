@@ -62,7 +62,7 @@ The difference between an API and a REST API is that a REST API is a specific ty
 architecture and uses HTTP, while an API is a general concept that can include various types of interfaces for programming
 applications, such as REST APIs, GraphQL APIs, etc.
 
-===========================
+# S
 
 3. Methods of building API
 
