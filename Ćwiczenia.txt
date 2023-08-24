@@ -1,0 +1,38 @@
+1.Optimizing performances
+
+-Lazy loading
+-avoid large store in Redux
+-React Profiler
+-browser development tools to analyze component render times, unnecessary re-renders, and inefficient state updates
+-useMemo and useCallback to prevent redundant calculations and renders
+-optimizing data flow
+
+
+2.State manage evolution
+
+Context API vs Redux
+
+3.Micro frontends
+
+Micro frontends offer modularity and independent deployment, which can be beneficial for your globally 
+dispersed team. However, they also introduce challenges like cross-micro frontend communication and 
+maintaining consistent user experiences. For your team, micro frontends could be strategic when dealing
+ with isolated features or teams, but a well-defined architecture and communication strategy are vital.
+  Consider adopting this approach for complex projects where separate deployment cycles are beneficial.
+
+4. Server side renderings SSR vs Client side rendering CSR
+
+NEXT.js - SSR - advantage for SEO  and initial load times since it renders content on the server, providing better search engine 
+indexing and faster page rendering. For content-heavy websites, SSR is strategic
+Gatsby.js Js- CSR applications prioritizing interactivity
+
+5.Accessibility in react apps
+
+Web Content Accessibility Guidelines 
+semantic HTML elements
+aria labels
+keyboard navigation
+
+6.UseContext Context Hooks
+
+Context lets a component receive information from distant parents without passing it as a props.
