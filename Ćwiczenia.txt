@@ -36,3 +36,12 @@ keyboard navigation
 6.UseContext Context Hooks
 
 Context lets a component receive information from distant parents without passing it as a props.
+
+7.Lifecycle of component and hooks usage
+
+componentDidMount useEffect
+
+componentDidUpdate useEffect(()=>{}) useEffect(()=>{},[]) 
+componentWillUnmount useEffect cleaning function
+
+s
