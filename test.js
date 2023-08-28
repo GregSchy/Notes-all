@@ -1,14 +1,5 @@
-function getPromiseForUserData() {
-  return new Promise((resolve) => {
-    fetchDataFromServerAsync().then(function (user) {
-      resolve(user);
-    });
-  });
+function add() {
+  console.log(this);
 }
 
-async function getPromiseForUserData() {
-  const user = await fetchDataFromServerAsync;
-  return user;
-}
-
-const promise = getPromiseForUserData();
+add();
