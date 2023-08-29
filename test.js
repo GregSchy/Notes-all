@@ -1,5 +1,4 @@
-function add() {
-  console.log(this);
-}
+let array = [0, 1, 2, 3];
+array.slice(-1);
 
-add();
+console.log(array.slice(-1));

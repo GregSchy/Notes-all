@@ -37,6 +37,9 @@ keyboard navigation
 
 Context lets a component receive information from distant parents without passing it as a props.
 
+================================
+
+
 7.Lifecycle of component and hooks usage
 
 componentDidMount useEffect
@@ -45,3 +48,91 @@ componentDidUpdate useEffect(()=>{}) useEffect(()=>{},[])
 componentWillUnmount useEffect cleaning function
 
 s
+
+8. Types of variables in Js, 13 sztuk
+
+
+      1.Primitive data Types
+
+      -number, boolean, "string", Null, Undefined, Symbol
+
+      2.Complex data Types
+
+      {},[], function, date, RegExp -regularexpression, Map, Set - collection of unique values
+
+            // Primitive Data Types
+            let name = "John";
+            let age = 30;
+            let isStudent = true;
+            let emptyValue = null;
+            let undefinedValue;
+
+            // Complex Data Types
+            let person = { firstName: "Jane", lastName: "Doe" };
+            let numbers = [1, 2, 3, 4, 5];
+            function greet(name) {
+              console.log(`Hello, ${name}!`);
+            }
+            let today = new Date();
+            let pattern = /abc/;
+            let colorsMap = new Map();
+            let uniqueValuesSet = new Set();
+
+9. Difference between var, let and const 
+
+let - is block scoped (inside curly braces), not global scoped, hoisted to the top in the process of hoisting but not initialized , cannot be redeclare within the same scope,
+can be reassigned after declaration
+
+const - block scoped, hoisted but not initialized, cannot be reassigned, value they hold can be mutable if the value is an object or an array
+
+var is old Js value, initialized as undefined on the hoisting, 
+
+
+            // var
+            var x = 10;
+            var x = 20; // No error, x is redeclared
+            function exampleVar() {
+              var y = 5;
+              if (true) {
+                var y = 10; // Same variable y, not block-scoped
+              }
+              console.log(y); // 10, due to hoisting
+            }
+
+            // let
+            let a = 10;
+            // let a = 20; // Error, a is already declared
+            function exampleLet() {
+              let b = 5;
+              if (true) {
+                let b = 10; // Separate variable b, block-scoped
+              }
+              console.log(b); // Error, b is not defined
+            }
+
+            // const
+            const PI = 3.14159;
+            // PI = 3.14; // Error, PI is a constant
+            const person = { name: "John" };
+            person.age = 30; // Valid, properties of the object are mutable
+
+10. What is object.prototype & proto (and example with getPrototypeOf, setPrototypeOf)
+
+11. What is the difference between Class and an object
+Class - attributes - methods
+
+-Class is a template for creating or instanting objects within program
+-declared with "class" keyword
+-class does not get any memory when it is created
+-class is declared once
+
+Objects
+
+-an instance of class
+-physical entity
+-created using "new" keyword
+-objects get memory when they are created
+-multiple objects are created using a class
+
+
+11. Virtual dom in React and how it contributes to performance optimization
