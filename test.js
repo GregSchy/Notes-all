@@ -1,4 +1,7 @@
-let array = [0, 1, 2, 3];
-array.slice(-1);
+function isPalindrome(str) {
+  return str === str.split("").reverse().join("");
+}
 
-console.log(array.slice(-1));
+// Test cases
+console.log(isPalindrome("racecar")); // Should output true
+console.log(isPalindrome("hello")); // Should output false
