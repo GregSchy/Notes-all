@@ -1,0 +1,90 @@
+1. useState
+
+The useState hook is one of the fundamental hooks in React,
+introduced in React 16.8. It allows you to add state to functional
+components, enabling them to manage and update their own state.
+The useState hook allows functional components to maintain their
+state in a way similar to class components with this.state.
+It simplifies state management and makes functional components more powerful and flexible.
+
+2.  useEffect
+
+The useEffect hook is a fundamental hook in React that allows you to perform
+side effects in functional components. Side effects can include data fetching,
+DOM manipulation, subscriptions, and more. useEffect is similar to lifecycle
+methods in class components, but it's more flexible and versatile. Here's how you can use the useEffect hook:
+import React, { useState, useEffect } from 'react';
+
+                    function MyComponent() {
+                    const [data, setData] = useState(null);
+
+                    // The useEffect hook is used for side effects
+                    useEffect(() => {
+                        // This code will run after the component renders
+
+                        // Example of a side effect: fetching data
+                        fetchData()
+                        .then((result) => {
+                            setData(result);
+                        })
+                        .catch((error) => {
+                            console.error('Error fetching data:', error);
+                        });
+
+                        // You can also return a cleanup function
+                        return () => {
+                        // This code will run when the component unmounts or when the dependencies change
+                        // Use it to clean up resources or cancel async tasks
+                        };
+                    }, [/* dependencies */]);
+
+                    return (
+                        <div>
+                        <p>Data: {data}</p>
+                        </div>
+                    );
+                    }
+
+                    export default MyComponent;
+
+Using the useEffect hook without a dependency array means that the effect will run after every render of the
+component, including the initial render. This behavior can lead to some potential issues and
+performance considerations, depending on how you use it.
+
+3. useContext
+
+4. useMemo
+
+The useMemo hook in React allows you to memoize the result of a computation so that it's not recalculated on every render.
+This can help optimize performance by avoiding unnecessary calculations, especially in cases where the calculation is expensive.
+Here's how you can use the useMemo hook:
+
+                function MyComponent() {
+                const [count, setCount] = useState(0);
+
+                // Define a function that you want to memoize
+                const expensiveCalculation = (input) => {
+                    console.log('Calculating...');
+                    return input * 2;
+                };
+
+                // Use useMemo to memoize the result of the function
+                const memoizedResult = useMemo(() => {
+                    return expensiveCalculation(count);
+                }, [count]); // The second argument is an array of dependencies
+
+                const increment = () => {
+                    setCount(count + 1);
+                };
+
+useMemo is useful for optimizing components by avoiding unnecessary recalculations of values that don't change frequently.
+It's particularly beneficial when dealing with complex computations or when the cost of computation is high.
+Keep in mind that you should only use useMemo when you have identified a performance bottleneck that can be
+improved through memoization, as it can add complexity to your code.
+
+5. useRef
+
+The useRef hook in React allows you to create mutable ref objects that can be used to access and
+manipulate DOM elements or persist values across renders without causing re-renders. useRef is
+often used for interacting with the DOM directly or for storing values that don't need to trigger
+a re-render when they change. Here's how you can use the useRef hook:
