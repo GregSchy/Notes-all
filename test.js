@@ -1,7 +1,21 @@
-function isPalindrome(str) {
-  return str === str.split("").reverse().join("");
-}
+import React, { useState, useEffect, useRef } from "react";
 
-// Test cases
-console.log(isPalindrome("racecar")); // Should output true
-console.log(isPalindrome("hello")); // Should output false
+export default function App() {
+  const [name, setName] = useState("");
+  const inputRef = useRef();
+
+  function focus() {
+    inputRef.current.focus();
+  }
+  return (
+    <>
+      <input
+        ref={inputRef}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <div>My name is {name}</div>
+      <button onClick={focus}>focus</button>
+    </>
+  );
+}

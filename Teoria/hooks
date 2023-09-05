@@ -82,9 +82,30 @@ It's particularly beneficial when dealing with complex computations or when the 
 Keep in mind that you should only use useMemo when you have identified a performance bottleneck that can be
 improved through memoization, as it can add complexity to your code.
 
-5. useRef
+5. useRef - object with {current: }property
+
+Store a data but unlike useState doesn't not cause re renders,
+reference elements in HTML, storing previous Value of state, persist values between renders, persist values across renders without causing re-renders
 
 The useRef hook in React allows you to create mutable ref objects that can be used to access and
 manipulate DOM elements or persist values across renders without causing re-renders. useRef is
 often used for interacting with the DOM directly or for storing values that don't need to trigger
 a re-render when they change. Here's how you can use the useRef hook:
+
+        import React, { useRef, useState } from 'react';
+
+        function MyComponent() {
+        const renderCount = useRef(0);
+        const [count, setCount] = useState(0);
+
+        renderCount.current++;
+
+        return (
+            <div>
+            <p>Render count: {renderCount.current}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+            </div>
+        );
+        }
+
+        export default MyComponent;
