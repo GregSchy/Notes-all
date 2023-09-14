@@ -164,3 +164,42 @@ var wishlist = [
 ];
 
 console.log(shoppingSpree(wishlist)); // 227005
+
+//////////////////////////////////////////////
+
+function shoppingSpree(arr) {
+  let totalCost = 0;
+
+  for (const item of arr) {
+    totalCost += item.price;
+  }
+
+  return totalCost;
+}
+
+var wishlist = [
+  { title: "Tesla Model S", price: 90000 },
+  { title: "4 carat diamond ring", price: 45000 },
+  { title: "Fancy hacky Sack", price: 5 },
+  { title: "Gold fidget spinner", price: 2000 },
+  { title: "A second Tesla Model S", price: 90000 },
+];
+
+console.log(shoppingSpree(wishlist)); // Output: 227005
+
+//////////////////////////////
+/////////////////////////////
+// 5) Given an array of arrays, flatten them into a single array
+
+function flatten(arr) {
+  return [].concat.apply([], arr);
+}
+
+function flattenSpread(arr) {
+  return [].concat(...arr);
+}
+
+var arrays = [["1", "2", "3"], [true], [4, 5, 6]];
+
+console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
+console.log(flattenSpread(arrays)); // ["1", "2", "3", true, 4, 5, 6];
